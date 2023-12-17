@@ -6,14 +6,19 @@ import "./Form.css";
 const Form = () => {
   const times = ["Programação", "Front-End", "DataScience", "UXUI", "Mobile"];
 
+  const inSave = (event) => {
+    event.preventDefault();
+    console.log("Form foi submetido");
+  };
+
   return (
     <section className="form">
-      <form>
+      <form onSubmit={inSave}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
-        <TextField label="Nome" placeholder="Digite seu nome" />
-        <TextField label="Cargo" placeholder="Digite o seu cargo" />
+        <TextField required={true} label="Nome" placeholder="Digite seu nome" />
+        <TextField required={true} label="Cargo" placeholder="Digite o seu cargo" />
         <TextField label="Imagem" placeholder="Digite o endereço da imagem" />
-        <List label="Time" itens={times} />
+        <List required={true} label="Time" itens={times} />
         <Button>Criar Card</Button>
       </form>
     </section>

@@ -6,7 +6,7 @@ const List = (props) => {
   return (
     <div className="List">
       <label>{props.label}</label>
-      <select>
+      <select required={props.required}>
         {props.itens.map((item, index) => (
           <option key={index}>{item}</option>
         ))} 
