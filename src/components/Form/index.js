@@ -4,7 +4,7 @@ import List from "../List";
 import TextField from "../TextField";
 import "./Form.css";
 
-const Form = () => {
+const Form = (props) => {
   const times = ["Programação", "Front-End", "DataScience", "UXUI", "Mobile"];
 
   const [name, setName] = useState("");
@@ -14,7 +14,12 @@ const Form = () => {
 
   const inSave = (event) => {
     event.preventDefault();
-    console.log("Form foi submetido => ", name, job, image);
+    props.oncollaboratorRegistered({
+      name,
+      job,
+      image,
+      squad,
+    });
   };
 
   return (
