@@ -1,3 +1,4 @@
+import Collaborator from "../Collaborator";
 import "./Squad.css";
 
 const Squad = (props) => {
@@ -6,6 +7,7 @@ const Squad = (props) => {
   return (
     <section className="squad" style={css}>
       <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
+      <Collaborator />
     </section>
   );
 };
