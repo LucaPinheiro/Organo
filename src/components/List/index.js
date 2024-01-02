@@ -9,6 +9,7 @@ const List = (props) => {
         required={props.required}
         value={props.value}
       >
+        <option value=""></option>
         {props.itens.map((item, index) => (
           <option key={index}>{item}</option>
         ))}

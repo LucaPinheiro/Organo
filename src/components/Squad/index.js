@@ -10,6 +10,8 @@ const Squad = (props) => {
       <div className="collaborator">
         {props.collaborators.map((collaborator) => (
           <Collaborator
+            backColor={props.primaryColor}
+            key={collaborator.name}
             name={collaborator.name}
             job={collaborator.job}
             image={collaborator.image}
