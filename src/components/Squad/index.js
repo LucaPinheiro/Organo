@@ -4,7 +4,7 @@ import "./Squad.css";
 const Squad = (props) => {
   const css = { backgroundColor: props.secondColor };
 
-  return (
+  return props.collaborators.length > 0 ? (
     <section className="squad" style={css}>
       <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
       <div className="collaborator">
@@ -17,6 +17,8 @@ const Squad = (props) => {
         ))}
       </div>
     </section>
+  ) : (
+    ""
   );
 };
 

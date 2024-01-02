@@ -5,7 +5,6 @@ import TextField from "../TextField";
 import "./Form.css";
 
 const Form = (props) => {
-
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
   const [image, setImage] = useState("");
@@ -19,6 +18,11 @@ const Form = (props) => {
       image,
       squad,
     });
+    
+    setName("");
+    setImage("");
+    setJob("");
+    setSquad("");
   };
 
   return (
