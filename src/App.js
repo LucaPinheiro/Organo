@@ -2,6 +2,7 @@ import { useState } from "react";
 import Banner from "./components/Banner/index.js";
 import Form from "./components/Form/index.js";
 import Squad from "./components/Squad/index.js";
+import Footer from "./components/Footer/index.js";
 
 function App() {
   const squads = [
@@ -51,7 +52,8 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form squads={squads.map(squad => squad.name)}
+      <Form
+        squads={squads.map((squad) => squad.name)}
         oncollaboratorRegistered={(collaborator) =>
           onNewCollaboratorAdd(collaborator)
         }
@@ -63,9 +65,12 @@ function App() {
           name={squad.name}
           primaryColor={squad.primaryColor}
           secondColor={squad.secondColor}
-          collaborators={collaborators.filter(collaborator => collaborator.squad === squad.name)}
+          collaborators={collaborators.filter(
+            (collaborator) => collaborator.squad === squad.name
+          )}
         />
       ))}
+      <Footer />
     </div>
   );
 }
