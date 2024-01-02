@@ -5,7 +5,6 @@ import TextField from "../TextField";
 import "./Form.css";
 
 const Form = (props) => {
-  const times = ["Programação", "Front-End", "DataScience", "UXUI", "Mobile"];
 
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
@@ -49,7 +48,7 @@ const Form = (props) => {
         <List
           required={true}
           label="Time"
-          itens={times}
+          itens={props.squads}
           value={squad}
           onChanged={(value) => setSquad(value)}
         />

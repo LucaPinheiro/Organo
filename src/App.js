@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form
+      <Form squads={squads.map(squad => squad.name)}
         oncollaboratorRegistered={(collaborator) =>
           onNewCollaboratorAdd(collaborator)
         }
